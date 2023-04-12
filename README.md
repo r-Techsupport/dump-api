@@ -26,7 +26,7 @@ Output (failure):
 
 ```json
 {
-	"success": false,
-	"error": "Error message"
+    "success": false,
+    "error": "Error message"
 }
 ```
