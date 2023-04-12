@@ -88,7 +88,7 @@ $output = null; // unused
 $result_code = null;
 
 $parse_status = 
-    exec("\"$DEBUGGER_PATH\" -zd $dmp_file -c \"!analyze -v; q\" -logo $out_file", $output, $result_code);
+    exec("\"$DEBUGGER_PATH\" -z $dmp_file -c \"k; !analyze; q\" -logo $out_file", $output, $result_code);
 
 if ($parse_status === false || $result_code !== 0) {
     error_log("Could not analyze $url");
@@ -96,7 +96,6 @@ if ($parse_status === false || $result_code !== 0) {
     unlink($out_file);
     error_response(500, "Could not analyze file");
 }
-
 
 unlink($dmp_file);
 
