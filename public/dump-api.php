@@ -4,7 +4,7 @@ include("../config.php");
 ini_set("log_errors", true);
 ini_set("error_log", $LOG_FILE);
 ini_set("date.timezone", $TIMEZONE);
-ini_set('max_execution_time', '300');
+set_time_limit(300);
 
 // Request/Error Handling -----------------------------------------------------
 
